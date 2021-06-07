@@ -2,17 +2,17 @@
 
 ### 1. Prepare the server (Ubuntu 18.04 or 20.04)
 1. Install Python3
-    - `sudo apt update`
-    - `sudo apt install -y curl python3 python3-pip`
+- `sudo apt update`
+- `sudo apt install -y curl python3 python3-pip`
 2. Install Arbitrum compilers
-    - `sudo apt install -y autoconf automake cmake libboost-dev libboost-filesystem-dev libgmp-dev librocksdb-dev libssl-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev libtool golang-go clang-format`
-    - `pip3 install cmake-format`
-    - `sudo add-apt-repository -y ppa:longsleep/golang-backports`
-   - `sudo apt update`
-    - `git clone -b v6.11.4 https://github.com/facebook/rocksdb`
-    - `cd rocksdb`
-    - `make shared_lib`
-    - `make install`
+- `sudo apt install -y autoconf automake cmake libboost-dev libboost-filesystem-dev libgmp-dev librocksdb-dev libssl-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev libtool golang-go clang-format`
+- `pip3 install cmake-format`
+- `sudo add-apt-repository -y ppa:longsleep/golang-backports`
+- `sudo apt update`
+- `git clone -b v6.11.4 https://github.com/facebook/rocksdb`
+- `cd rocksdb`
+- `make shared_lib`
+- `make install`
 3. Install Docker
 https://docs.docker.com/engine/install/ubuntu/
 4. Install Docker compose
