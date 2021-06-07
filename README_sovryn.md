@@ -61,7 +61,7 @@ and the L2 info:
       gas: 9000000
     }
 `
-- Edit packages/arb-bridge-eth/package.json and add
+- Edit packages/arb-bridge-eth/package.json and add  
 `"deploy:rsktestnet": "hardhat deploy --tags live --network rsktestnet --export bridge_eth_addresses.json",`
 - Add the deployer private key priv.json as String with 0x ("0xcafecafecafe")
 - Run `sudo yarn deploy:rsktestnet`
@@ -72,7 +72,7 @@ addresses and abis.
 
 dirty quickfix for "permision denied errors": do chmod 777 for the whole package
 
-- Edit package.json, add
+- Edit package.json, add  
 `"rsktest:initialize": "yarn workspace tools rsktest:initialize",`
 - Run `sudo yarn rsktest:initialize`
 
@@ -82,15 +82,14 @@ The output should be a rollup addres in your terminal and a folder arbitrum/roll
 4. Start the validator and aggregator
 `sudo yarn demo:deploy`
 
-stop the process after some minutes and run
+stop the process after some minutes and run  
 `sudo docker-compose -f docker-compose.yml up -d & docker-compose logs -f`
 to have the process in the background.
 
-Check the logs with
-`sudo docker-compose logs -f`
+Check the logs with `sudo docker-compose logs -f`
 
 
-5. Create bridge contracts
+5. Create bridge contracts  
 Create .env file in packages/arb-bridge-peripherals
 
 DEVNET_PRIVKEY=?
