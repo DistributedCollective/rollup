@@ -30,28 +30,29 @@ NodeJs need to be <= v12
 ## 2. Download and install arbitrum
 
 rsk testnet rpc: http://3.141.186.36:4444
-deployer: 0xf2bed2ebD2e6EE52Bb883D39E25B0Ad4a7a02E8D
 
 1. Download and install the monorepo
-`git clone -b sequencer2 https://github.com/offchainlabs/arbitrum.git`
-`cd arbitrum`
-`git submodule update --init --recursive`
-`yarn`
-`yarn build`
-`yarn install:validator`
+- `git clone -b sequencer2 https://github.com/offchainlabs/arbitrum.git`
+- `cd arbitrum`
+- `git submodule update --init --recursive`
+- `yarn`
+- `yarn build`
+- `yarn install:validator`
 
 2. Deploy the bridge contracts on Rsk testnet
 a. Edit packages/arb-bridge-eth/hardhat.config.ts by adding rskTestnet
 `
- rsktestnet: {  
-     url: 'http://3.141.186.36:4444',  //experimental rsk node
-      accounts: [PrivateKey],  
-      network_id: 31,
-      confirmations: 3,
-      gas: 6800000
-    }
+     rsktestnet: {    
+         url: 'http://3.141.186.36:4444',  //experimental rsk node  
+         accounts: [PrivateKey],  
+         network_id: 31,
+         confirmations: 3,
+         gas: 6800000
+     }
 `
-and the L2 info:
+
+and the L2 info:  
+
 `rskL2: {
       url: 'http://18.217.222.156:8547',
       accounts: [PrivateKey],
