@@ -92,7 +92,7 @@ Check the logs with `sudo docker-compose logs -f`
 5. Create bridge contracts  
 Create .env file in packages/arb-bridge-peripherals
 
-DEVNET_PRIVKEY=?
+DEVNET_PRIVKEY=
 INBOX_ADDRESS=inbox address from validator config
 
 run `sudo yarn rsk:deploy in arb-bridge-peripherals`

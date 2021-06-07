@@ -63,11 +63,8 @@ async function initializeWallets(count: number): Promise<ethers.Wallet[]> {
 async function initializeClientWallets(inboxAddress: string): Promise<void> {
   console.log("init client wallets")
   const addresses = [
-    '0xa975d1de6d7da3140e9e293509337373402558be',
-    // '0x38299D74a169e68df4Da85Fb12c6Fd22246aDD9F',
-    // '0xAf40F7D235A9786a420bb89B188910958fD7EF93',
-    // '0xFcC598b3E3575CA937AF7F0E804a8BAb5E92a3f6',
-    // '0x755449b9901f91deC52DB39AF8c655206C63eD8e',
+"0x11e6A5F9a7aFC3c614d67260fD663BDF2AaE6EaA".toLowerCase(),
+"0xf2BeD2ebd2E6ee52Bb883d39E25B0AD4A7a02E8D".toLowerCase() //deployer of peripherals, needs at least 0.08
   ]
 
   const inbox = Inbox__factory.connect(inboxAddress, wallet)
