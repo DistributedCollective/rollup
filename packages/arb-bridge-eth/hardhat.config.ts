@@ -191,10 +191,7 @@ const config = {
     },
     rskL2: {
       url: 'http://18.217.222.156:8547',
-      accounts: [PrivateKey],
-      gasPrice: 1000,
-      network_id: 123212321,
-      gas: 9000000
+      accounts: [PrivateKey]
     }
 
   },
