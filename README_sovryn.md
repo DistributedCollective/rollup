@@ -40,7 +40,7 @@ rsk testnet rpc: http://3.141.186.36:4444
 - `yarn install:validator`
 
 2. Deploy the bridge contracts on Rsk testnet
-a. Edit packages/arb-bridge-eth/hardhat.config.ts by adding rskTestnet
+- Edit packages/arb-bridge-eth/hardhat.config.ts by adding rskTestnet
 `
      rsktestnet: {    
          url: 'http://3.141.186.36:4444',  //experimental rsk node  
@@ -61,10 +61,10 @@ and the L2 info:
       gas: 9000000
     }
 `
-b. Edit packages/arb-bridge-eth/package.json and add
+- Edit packages/arb-bridge-eth/package.json and add
 `"deploy:rsktestnet": "hardhat deploy --tags live --network rsktestnet --export bridge_eth_addresses.json",`
-c. Add the deployer private key priv.json as String with 0x ("0xcafecafecafe")
-d. Run `sudo yarn deploy:rsktestnet`
+- Add the deployer private key priv.json as String with 0x ("0xcafecafecafe")
+- Run `sudo yarn deploy:rsktestnet`
 The output of the deployment is a deployment directory "deployments/rskTestnet" with the deployed contract
 addresses and abis.
 
@@ -72,9 +72,9 @@ addresses and abis.
 
 dirty quickfix for "permision denied errors": do chmod 777 for the whole package
 
-a.  Edit package.json, add
+- Edit package.json, add
 `"rsktest:initialize": "yarn workspace tools rsktest:initialize",`
-b. Run `sudo yarn rsktest:initialize`
+- Run `sudo yarn rsktest:initialize`
 
 The output should be a rollup addres in your terminal and a folder arbitrum/rollups. 
 
